@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: ussd-appeal-system
+    env: python
+    buildCommand: ""
+    startCommand: python admin.py
+    envVars:
+      - key: DB_URL
+        value: mysql://root:orMxwOZWScBYDyXxqIqYqjQQriyOHNkk@trolley.proxy.rlwy.net:11667/railway
