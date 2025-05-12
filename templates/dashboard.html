@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head><title>Appeal Dashboard</title></head>
+<body>
+  <h2>All Student Appeals</h2>
+  <a href="/logout">Logout</a>
+  <table border="1">
+    <tr><th>Student</th><th>Module</th><th>Reason</th><th>Status</th><th>Action</th></tr>
+    {% for appeal in appeals %}
+    <tr>
+      <td>{{ appeal.student_name }}</td>
+      <td>{{ appeal.module_name }}</td>
+      <td>{{ appeal.reason }}</td>
+      <td>{{ appeal.status_name }}</td>
+      <td><a href="/update/{{ appeal.id }}">Update</a></td>
+    </tr>
+    {% endfor %}
+  </table>
+</body>
+</html>
