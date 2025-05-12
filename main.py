@@ -90,5 +90,6 @@ def submit_appeal(student_id, module_name, reason):
         cursor.close()
         conn.close()
 
-if __name__ == '__main__':
-    app.run(debug=True)
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=10000)
+
